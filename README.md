@@ -47,7 +47,7 @@ Tests can be run using the following command once you are inside your Odoo direc
 python3 odoo-bin -i customer_tier_discounts --log-level=test -d mydb --test-enable --stop-after-init
 ```
 
-Where `mydb` is the name of your databse.
+Where `mydb` is the name of your database.
 
 If everything is set up correctly, the module should be able to pass all tests. Observe the `odoo.log` file for any messages.
 

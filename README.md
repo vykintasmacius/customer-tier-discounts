@@ -20,24 +20,26 @@ The module has two dependencies: `sale` and `sale_management.` They should be
 
 1. **Creating a tier**:
 - First, go to `Sales -> Configuration -> Customer Tiers.` Then click `New` and populate the name and discount fields accordingly.
-- To delete a tier, select it and click `Actions -> Delete.`
-- Tiers can also be created inside each customer's form view (see below).
+- To delete a tier, select it and click `Action -> Delete.`
+- Tiers can also be created or deleted inside each customer's form view (see below).
 
 2. **Assigning a tier**:
 - Navigate to the customer's form view for which you want a tier assigned.
-- Click on `Sale & Purchases` tab and scroll until you see a `Customer Tier` section. 
-- Use it to assign, unassign or create a new tier.
+- Click on `Sales & Purchases` tab and scroll until you see a `Customer Tier` section.
+- Click `Edit` and use the section to assign, unassign or create a new tier.
+- To delete a tier in customer's form view, they must have it assigned first.
+- Once assigned, exit the `Edit` mode and click on the assigned tier's hyperlink. Then click `Action -> Delete.`
 
 3. **Creating an order**:
-- You can create an order by going to `Sales -> Orders -> Orders.`
-- Once created or updated, the appropriate discount is applied based on the customer's tier.
+- You can create an order by going to `Sales -> Orders -> Orders.` and pressing the `Create` button.
+- Once created or updated, the appropriate discount is applied based on the customer's current tier.
 
 ## Unit tests
 
-The `tests` folder contains unit tests that cover:
+The `customer_tier_discounts/tests` folder contains unit tests that cover:
 - Creation and assignment of different tiers to customers
 - Different discount applications based on tiers
-- Edge cases (no tier, discount percent over 100, etc.)
+- Edge cases (no tier, invalid discount percent)
 
 Tests can be run using the following command once you are inside your Odoo directory:
 
